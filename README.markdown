@@ -42,6 +42,10 @@ Example project
 
 See a very simple, but working, example project here: [https://github.com/jbrechtel/robospecs_example](https://github.com/jbrechtel/robospecs_example)
 
+
+NOTE: When you use RoboSpecs do not attempt to place Android SDK code within the "should {} codeblock" or outside of it. Robolectric shadows are only attached within the "in {} codeblocks", so Android SDK code only works within them.
+
+
 Here's the specs from that projects
 
 Then you can mix it into your Specs2 specs like so:
@@ -66,7 +70,7 @@ Then you can mix it into your Specs2 specs like so:
 	  }
 
 	  "showMessageButton" should {
-	    "be the Show Message button in the view" in {
+	    "be the Show Message button in the view" in 
 	      val activity = new MainActivity()
 	      activity.onCreate(null)
 	      activity.showMessageButton == activity.findViewById(R.id.show_message)
