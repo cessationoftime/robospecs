@@ -14,6 +14,7 @@ resolvers ++= Seq(
 				  
 libraryDependencies ++= Seq(
     "com.pivotallabs" % "robolectric" % "1.0-RC5-SNAPSHOT",
+	"junit" % "junit" % "4.8.2",
     "org.specs2" %% "specs2" % "1.6.1",
     "org.specs2" %% "specs2-scalaz-core" % "6.0.1" % "test",
 	"org.mockito" % "mockito-all" % "1.8.5")
