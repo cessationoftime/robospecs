@@ -1,7 +1,7 @@
 /** Project */
 name := "robospecs"
 
-version := "0.2-SNAPSHOT"
+version := "0.1-SNAPSHOT"
 
 organization := "com.github.jbrechtel"
 
@@ -20,3 +20,18 @@ libraryDependencies ++= Seq(
 
 // Compilation
 javaSource in Test <<= baseDirectory { _ / "src" / "test" / "emptyAndroidProject" / "src" / "java"}	
+
+// Assembly Plugin
+
+//seq(sbtassembly.Plugin.assemblySettings: _*)
+
+//excludedFiles in Assembly := { (base: Seq[File]) =>
+//    ((base / "META-INF" ** "*") ---
+//     (base / "META-INF" / "services" ** "*") ---
+//     (base / "META-INF" / "maven" ** "*")).get }
+	   
+// publishArtifact in (Assembly, packageScala) := false
+  
+//  publishArtifact in (Assembly, packageBin) := false
+  
+//  jarName in Assembly := "robospecs-assembly-0.2.jar"
